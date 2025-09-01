@@ -23,7 +23,7 @@ jobs:
         
         uses: github/codeql-action/init@v3
         with:
-          config-file: ./../codeql/codeql-config.yml
+          config-file: ./.github/codeql/codeql-config.yml
           queries: +security-and-quality,octo-org/python-qlpack/show_ifs.ql@main
           packs: +scope/pack1,scope/pack2@1.2.3,scope/pack3@4.5.6:/
 
