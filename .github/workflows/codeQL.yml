@@ -19,7 +19,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
+        #uses: github/codeql-action/init@v1
+        
+        uses: github/codeql-action/init@v3
+        with:
+          config-file: ./codeql/codeql-config.yml
+          queries: +security-and-quality,octo-org/python-qlpack/show_ifs.ql@main
+          packs: +scope/pack1,scope/pack2@1.2.3,scope/pack3@4.5.6:/
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
