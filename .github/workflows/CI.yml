@@ -1,4 +1,6 @@
 name: CI for local local-action
+permissions:
+  contents: read
 on:
   push:
     branches-ignore:
