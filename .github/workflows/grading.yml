@@ -1,4 +1,6 @@
 name: Grading workflow
+permissions:
+  contents: read
 on:
   push:
     paths:
